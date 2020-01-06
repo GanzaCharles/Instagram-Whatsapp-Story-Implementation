@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import app.sample.mystory.R
 import app.sample.mystory.ui.MainActivity
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.bumptech.glide.Priority
 import com.bumptech.glide.request.RequestOptions
 
 class StoryAdapter(private val ctx: Context, private val storiesList: ArrayList<UserInfo>) : RecyclerView.Adapter<StoryAdapter.StoryViewHolder>() {
@@ -34,13 +34,17 @@ class StoryAdapter(private val ctx: Context, private val storiesList: ArrayList<
         //load the user image with glide
         Glide.with(ctx)
             .load(story.profilePicture)
-            .apply(RequestOptions().transform(RoundedCorners(6)).placeholder(R.drawable.ic_launcher_background))
+            .apply(
+                RequestOptions.centerCropTransform()
+                    .placeholder(R.drawable.ic_launcher_background).priority(
+                        Priority.HIGH
+                    ).circleCrop()
+            )
             .into(holder.userImage)
 
         //load the preview image of the first story. Glide will show a default image when the preview is null :)
         Glide.with(ctx)
             .load(story.stories[0].preview)
-            .apply(RequestOptions().transform(RoundedCorners(1)).placeholder(R.drawable.ic_launcher_background))
             .into(holder.storyPreview)
 
         //show the clicked story
