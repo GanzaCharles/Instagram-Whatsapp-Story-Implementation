@@ -7,6 +7,7 @@ object Constants {
             "\t\"user_info\":[\n" +
             "      {\n" +
             "         \"names\":\"Jason Voorhees\",\n" +
+            "\t\t \"profile_picture\":\"https://www.gstatic.com/webp/gallery/1.jpg\",\n" +
             "         \"stories\":[\n" +
             "            {\n" +
             "               \"type\":\"image\",\n" +
@@ -33,6 +34,7 @@ object Constants {
             "      },\n" +
             "      {\n" +
             "         \"names\":\"Alien\",\n" +
+            "\t\t \"profile_picture\":\"https://www.gstatic.com/webp/gallery/4.jpg\",\n" +
             "         \"stories\":[\n" +
             "            {\n" +
             "               \"type\":\"image\",\n" +
@@ -52,12 +54,26 @@ object Constants {
             "      },\n" +
             "      {\n" +
             "         \"names\":\"Leatherface\",\n" +
+            "\t\t \"profile_picture\":\"https://www.gstatic.com/webp/gallery/5.jpg\",\n" +
             "         \"stories\":[\n" +
             "            {\n" +
             "               \"type\":\"image\",\n" +
             "               \"data\":\"https://www.gstatic.com/webp/gallery/5.jpg\",\n" +
             "               \"views\":4345,\n" +
             "               \"date\":\"2018:12:20:17:56:44\",\n" +
+            "               \"preview\":\"https://www.gstatic.com/webp/gallery/5.jpg\"\n" +
+            "            }\n" +
+            "         ]\n" +
+            "      },\n" +
+            "\t  {\n" +
+            "         \"names\":\"Freddy Krueger\",\n" +
+            "\t\t \"profile_picture\":\"https://www.gstatic.com/webp/gallery/5.jpg\",\n" +
+            "         \"stories\":[\n" +
+            "            {\n" +
+            "               \"type\":\"image\",\n" +
+            "               \"data\":\"https://www.gstatic.com/webp/gallery/5.jpg\",\n" +
+            "               \"views\":324,\n" +
+            "               \"date\":\"2013:12:20:17:56:44\",\n" +
             "               \"preview\":\"https://www.gstatic.com/webp/gallery/5.jpg\"\n" +
             "            }\n" +
             "         ]\n" +

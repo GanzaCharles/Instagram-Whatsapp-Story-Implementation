@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import app.sample.mystory.R
 import app.sample.mystory.ui.MainActivity
@@ -41,7 +41,7 @@ class StoryAdapter(private val ctx: Context, private val storiesList: ArrayList<
         Glide.with(ctx)
             .load(story.stories[0].preview)
             .apply(RequestOptions().transform(RoundedCorners(1)).placeholder(R.drawable.ic_launcher_background))
-            .into(holder.userImage)
+            .into(holder.storyPreview)
 
         //show the clicked story
         holder.storyItemView.setOnClickListener {
@@ -54,7 +54,7 @@ class StoryAdapter(private val ctx: Context, private val storiesList: ArrayList<
         var storyPreview: ImageView = itemView.findViewById(R.id.storyPreview)
         var userImage: ImageView = itemView.findViewById(R.id.userImage)
         var userNameView: TextView = itemView.findViewById(R.id.userNameView)
-        var storyItemView: ConstraintLayout = itemView.findViewById(R.id.storyItemView)
+        var storyItemView: CardView = itemView.findViewById(R.id.storyItemView)
     }
 
 }
